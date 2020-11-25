@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#menuToggler {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    background: #FFFFFF;
+    color: #535353;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    font-size: 20px;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    z-index: 4;
+    transition: all 0.15s ease-in;
+}
+
+#menuToggler:hover {
+    background: #5CC0A2;
+    color: #FFFFFF;
+}
+
+.menu {
+    width: 0px;
+    z-index: 3;
+    background: #FFFFFF;
+    height: 100vh;
+    max-width: 350px;
+    position: absolute;
+    overflow: hidden;
+    border-left: 1px solid #D1D1D1;
+    top: 0;
+    right: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+.space {
+    display: block;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #D1D1D1;
+}
+
+.info-user {
+    position: relative;
+    height: 55px;
+    padding: 10px 10px 10px 90px;
+    /* background: red; */
+}
+
+.info-user>img {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+}
+
+.credit {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    color: #adadad;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+
+#user-role {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px;
+    background: #80CEB7;
+}
+
+#user-nick {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.menu-items,
+.menu-item {
+    width: 100%;
+}
+
+.menu-title {
+    display: block;
+    margin-bottom: 10px;
+    padding: 20px 30px;
+    width: 100%;
+    background: #F6F6F6;
+    color: #010101;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.1s ease-in;
+}
+
+.menu-title-actived,
+.menu-title:hover {
+    border-left: 5px solid #80CEB7;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container>.col-1 {
+    width: 50%;
+    height: 100vh;
+    float: left;
+}
+
+.col-1>img {
+    width: 100%;
+}
+
+.container>.col-2 {
+    width: 50%;
+    height: 100vh;
+    float: left;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.music-container {
+    box-sizing: border-box;
+    position: relative;
+    height: 560px;
+    max-height: 560px;
+}
+
+.appName {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.namePrimary {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.containerSearch {
+    width: 100%;
+    position: relative;
+    height: 35px;
+    margin-bottom: 10px;
+    background: white;
+    box-sizing: border-box;
+}
+
+.containerSearch>.control-search {
+    width: 100%;
+    padding: 10px 10px 10px 50px;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.containerSearch>.icon-search {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+}
+
+.playlist-items {
+    width: 100%;
+    height: 250px;
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+.playlist-item {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    background: #FFFFFF;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in;
+}
+
+.playlist-item:hover,
+.song-actived {
+    background: #F6F6F6;
+}
+
+.playlist-item>.icon-playlist {
+    position: absolute;
+    top: 14px;
+    font-size: 30px;
+    right: 30px;
+    color: #5CC0A2;
+}
+
+.playlist-item>#nameSong {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.playlist-item>#nameArtist {
+    font-size: 15px;
+    color: #5CC0A2;
+}
+
+.player-items {
+    position: relative;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 109px;
+    bottom: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.songActual {
+    margin-top: 13px;
+    margin-left: 20px;
+}
+
+.player-controls {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+.player-controls>#previous,
+#play,
+#next {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 100%;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+/*Login*/
+
+.wh-100 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.wh-100>.wallpaper-web {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.login {
+    width: 480px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: white;
+    z-index: 1;
+    box-shadow: 0px 0px 7px 0px #212121;
+    -moz-box-shadow: 0px 0px 7px 0px #212121;
+    -webkit-box-shadow: 0px 0px 7px 0px #212121;
+}
+
+.login>h2 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #737373;
+}
+
+.login>h2>span {
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: none;
+}
+
+.login>h2>span>img {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.title-extra {
+    color: #5A5A5A;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.control-form {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #666666;
+    box-sizing: border-box;
+}
+.control-form-upload{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    margin-bottom: 10px;
+    border: 1px solid #666666;
+    box-sizing: border-box;
+}
+
+.label-one {
+    color: #666666;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.btnPrimary {
+    font-size: 14px;
+    width: 100%;
+    cursor: pointer;
+    display: block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    background: #5CC0A2;
+    border: 1px solid #5CC0A2;
+}
+
+.link-extra {
+    margin-top: 10px;
+    text-align: center;
+    color: #474747;
+}
+
+.link-extra>a {
+    text-decoration: none;
+    color: #5CC0A2;
+    transition: all 0.25s ease;
+}
+
+.link-extra>a:hover {
+    text-decoration: underline;
+}
+/*
+Aletas de la aplicación
+*/
+.alert{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-left: 5px solid;
+    box-sizing: border-box;
+    transition: all 0.25s ease-in;
+}
+.alert-error{
+    background: #FFE1E3;
+    color: #FF4454;
+    border-left-color: #FF4454;
+}
+.alert-info{
+    background: #D6F0FF;
+    color: #76C9FB;
+    border-left-color: #76C9FB;
+}
+.alert-success{
+    background:#C2F3D6;
+    color: #30D372;
+    border-left-color: #30D372;
+}
+.alert-warning{
+    background: #FEDB9B;
+    color: #FEA600;
+    border-left-color: #FEA600;
+}
+/*Margin Bottom*/
+.mb-5 {
+    margin-bottom: 50px;
+}
+.mb-4 {
+    margin-bottom: 40px;
+}
+.mb-3 {
+    margin-bottom: 30px;
+}
+.mb-2 {
+    margin-bottom: 20px;
+}
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.db{
+    display: block;
+    text-align: center;
+}
+/* Buttons */
+.btn{
+    width: auto;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid;
+    color: white;
+    text-decoration: none;
+}
+.btn-error{
+    background: #FFE1E3;
+    color: #FF4454;
+    border-left-color: #FF4454;
+}
+.btn-info{
+    background: #D6F0FF;
+    color: #76C9FB;
+    border-left-color: #76C9FB;
+}
+.btn-success{
+    background:#C2F3D6;
+    color: #30D372;
+    border-left-color: #30D372;
+}
+.btn-warning{
+    background: #FEDB9B;
+    color: #FEA600;
+    border-left-color: #FEA600;
+}
+
+.image-w100{
+    width: 100%;
+    position: relative;
+    background: red;
+}
+.image-w100 > img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.separe{
+    width: 100%;
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: #e2e2e2;
+}

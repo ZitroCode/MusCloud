@@ -1,0 +1,1 @@
+In this folder are all the covers of the songs that are being uploaded
