@@ -1,5 +1,4 @@
 <?php
-require 'core/init.php';
 require 'server/libs/settings.php';
 require 'server/libs/class.database.php';
 require 'server/utils/encript.php';
