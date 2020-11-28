@@ -156,7 +156,7 @@ En JavaScript el código sería algo como el siguiente.
         //Obtiene el nombre que hemos ingresado del form
         var audioName = document.getElementById("name").value;
         // Obtiene el objeto del archivo del form
-        var audio = document.getElementById("song").file[0];
+        var audio = document.getElementById("song").files[0];
 
         var formData = new FormData(); // Crea un formulario
         // Metemos los datos para poder enviarlos posteriormente.
